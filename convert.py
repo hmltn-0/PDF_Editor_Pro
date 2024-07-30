@@ -3,11 +3,24 @@ from pdf2image import convert_from_path
 import os
 
 def pdf_to_images(pdf_path):
+    "
+    Converts a PDF file to a list of image files.
+    
+    Args:
+        pdf_path (str): The file path of the PDF to be converted.
+    
+    Returns:
+        list: A list of file paths to the converted images.
+    "
     try:
         images = convert_from_path(pdf_path)
         image_files = []
+
+        # Create output_images directory if not exists
         if not os.path.exists('output_images'):
             os.makedirs('output_images')
+
+        # Save each page as an image file
         for i, image in enumerate(images):
             image_path = f'output_images/page_{i + 1}.jpeg'
             image.save(image_path, 'JPEG')
