@@ -30,3 +30,19 @@ def pdf_to_images(pdf_path):
         print(f'Error converting PDF: {e}')
         return []
 
+from PyPDF2 import PdfMerger
+
+def merge_pdfs(pdf_list, output):
+    '''
+    Merge multiple PDFs into a single PDF.
+    
+    Args:
+        pdf_list (list): List of PDF file paths to merge.
+        output (str): Path to the output merged PDF file.
+    '''
+    merger = PdfMerger()
+    for pdf in pdf_list:
+        merger.append(pdf)
+    merger.write(output)
+    merger.close()
+

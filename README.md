@@ -2,11 +2,6 @@
 
 This project is a versatile and robust app for converting PDF documents to text, with future plans to include various PDF editing functions. The goal is to launch a startup and make this app widely available, including on the App Store.
 
-## Features
-- Convert PDF to plain text, Markdown, and LaTeX
-- User-friendly GUI built with PyQt5
-- Future enhancements planned for more PDF editing functionalities
-
 ## Vision and Future Plans
 Our vision is to create a comprehensive PDF editing tool that simplifies the process of managing PDFs. Features we plan to add in the future include:
 - Merge and split PDFs
@@ -14,6 +9,15 @@ Our vision is to create a comprehensive PDF editing tool that simplifies the pro
 - Redact sensitive information
 - Fill and sign forms
 - Cloud integration for easy access and storage
+
+## Market Analysis
+The market for PDF tools is growing as businesses and individuals increasingly rely on digital documents. By offering an all-in-one solution, we aim to capture a significant share of this market.
+
+## Business Model
+We plan to adopt a freemium model where basic features are free, and advanced features are available through a subscription. This ensures accessibility while generating sustainable revenue.
+
+## Team
+Our team consists of experienced software developers and business strategists dedicated to delivering a high-quality product.
 
 ## Getting Started
 ### Prerequisites
@@ -39,7 +43,7 @@ A GUI will appear, allowing you to select and convert PDFs.
 ### Running Tests
 To run the test suite:
 ```
-python3 test_script.py
+python3 -m unittest discover
 ```
 
 ## Documentation
@@ -47,7 +51,7 @@ The code is heavily documented and includes a rich test suite to ensure reliabil
 
 - **main.py**: Entry point of the application.
 - **gui.py**: Handles the GUI functionality using PyQt5.
-- **convert.py**: Contains functions to convert PDF to images.
+- **convert.py**: Contains functions to convert and merge PDFs.
 - **ocr.py**: Contains functions to perform OCR on images.
 - **test_script.py**: Test script to verify functionalities.
 

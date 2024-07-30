@@ -1,26 +1,25 @@
-# test_script.py
-from convert import pdf_to_images
+import unittest
+from convert import pdf_to_images, merge_pdfs
 from ocr import ocr_image
 import os
 
-def main():
-    "
-    Main test function to verify the PDF to text conversion process.
-    "
-    pdf_path = 'test_document.pdf'  # Path to a sample test PDF
-    print(f'Starting test with PDF: {pdf_path}')
-
-    # Test PDF to images conversion
-    image_files = pdf_to_images(pdf_path)
-    assert len(image_files) > 0, 'No images were created from the PDF.'
-
-    # Test OCR on the images
-    for image_file in image_files:
-        text = ocr_image(image_file)
-        assert text is not None, 'OCR did not return any text.'
-
-    print('All tests passed.')
+class TestPDFConverter(unittest.TestCase):
+    def test_pdf_to_images(self):
+        pdf_path = 'test_document.pdf'
+        image_files = pdf_to_images(pdf_path)
+        self.assertGreater(len(image_files), 0, 'No images were created from the PDF.')
+    
+    def test_ocr_image(self):
+        image_path = 'output_images/page_1.jpeg'
+        text = ocr_image(image_path)
+        self.assertIsNotNone(text, 'OCR did not return any text.')
+    
+    def test_merge_pdfs(self):
+        pdf_list = ['test_document.pdf', 'test_document.pdf']
+        output = 'merged_output.pdf'
+        merge_pdfs(pdf_list, output)
+        self.assertTrue(os.path.exists(output), 'Merged PDF was not created.')
 
 if __name__ == '__main__':
-    main()
+    unittest.main()
 
