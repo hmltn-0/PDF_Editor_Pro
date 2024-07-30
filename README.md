@@ -7,16 +7,39 @@ This project is a versatile and robust app for converting PDF documents to text,
 - User-friendly GUI built with PyQt5
 - Future enhancements planned for more PDF editing functionalities
 
+## Vision and Future Plans
+Our vision is to create a comprehensive PDF editing tool that simplifies the process of managing PDFs. Features we plan to add in the future include:
+- Merge and split PDFs
+- Annotate and highlight text
+- Redact sensitive information
+- Fill and sign forms
+- Cloud integration for easy access and storage
+
 ## Getting Started
-To get started, clone the repository and install the required dependencies:
+### Prerequisites
+Ensure you have the following installed:
+- Python 3
+- Pip (Python package installer)
+
+### Installation
+To get started, follow these steps:
 ```
 git clone https://github.com/hmltn-0/pdf-to-text-app.git
 cd pdf-to-text-app
 pip install -r requirements.txt
 ```
-Then, you can run the main application:
+
+### Usage
+To run the main application:
 ```
 python3 main.py
+```
+A GUI will appear, allowing you to select and convert PDFs.
+
+### Running Tests
+To run the test suite:
+```
+python3 test_script.py
 ```
 
 ## Documentation
