@@ -1,3 +1,4 @@
+![Build Status](https://img.shields.io/github/actions/workflow/status/hmltn-0/PDF_Editor_Pro/build.yml)
 # PDF to Text Converter App
 
 This project is a versatile and robust app for converting PDF documents to text, with future plans to include various PDF editing functions. The goal is to launch a startup and make this app widely available, including on the App Store.
@@ -65,3 +66,4 @@ We are open to funding opportunities to accelerate development and bring our vis
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 
+![MIT License](https://img.shields.io/github/license/hmltn-0/PDF_Editor_Pro)
